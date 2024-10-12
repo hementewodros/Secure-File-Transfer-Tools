@@ -1,61 +1,67 @@
-# Secure-File-Transfer-NotDone
-# 1) RSA Key Generation Script
+# Secure File Transfer
 
-## Overview
-
-This script implements a simple RSA key generation algorithm. It prompts the user for two prime numbers, calculates the public and private keys based on those inputs, and checks for input validity.
+Welcome to the Secure File Transfer repository! This project implements a basic encryption and decryption system using RSA (Rivest-Shamir-Adleman) cryptography. The system allows users to encrypt and decrypt numbers, which can be adapted for securing sensitive data.
 
 ## Features
 
-- Validates whether the input numbers are prime.
-- Calculates the public and private keys using RSA algorithm.
-- Provides error messages for invalid inputs.
+- **RSA Encryption**: Generate public and private keys for encrypting and decrypting data.
+- **Prime Checking**: Validate input numbers to ensure they are prime.
+- **Random Key Selection**: Choose random valid encryption keys from a generated list.
+- **User-friendly Input**: Simple command-line interface for user inputs.
 
-## Requirements
+## Getting Started
 
-- Python 3.x
-- No external libraries are required.
+### Prerequisites
 
-## How It Works
+Make sure you have Python 3.x installed on your machine. You can download it from [python.org](https://www.python.org/downloads/).
 
-1. **Prime Check**: The script first checks if the entered numbers \( p \) and \( q \) are prime.
-2. **Public Key Calculation**: It calculates the public key using the formula \( n = p \times q \) and selects a suitable \( e \) such that \( e \) is coprime to \( (p-1)(q-1) \).
-3. **Private Key Calculation**: It calculates the private key \( d \) using the modular multiplicative inverse of \( e \).
-4. **Error Handling**: If the input numbers are not positive or not prime, it provides an appropriate error message.
+### Installation
 
-## Functions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/secure-file-transfer.git
+   cd secure-file-transfer
+   ```
 
-- `checkIfPrime(a)`: Checks if a number is prime.
-- `calculatePbKey(p, q)`: Calculates the public key.
-- `calculatePvKey(e, En, n)`: Calculates the private key.
-- `error(a)`: Displays error messages based on the input.
+2. Run the encryption and decryption script:
+   ```bash
+   python encrypt_decrypt_numbers.py
+   ```
 
-## Usage
+### Usage
 
-1. Run the script.
-2. Enter a prime number for \( p \) when prompted.
-3. Enter a prime number for \( q \) when prompted.
-4. The script will output the public and private keys if both inputs are valid.
+1. Input two prime numbers `p` and `q` when prompted.
+2. The program will generate public and private keys based on these primes.
+3. You can then input a number to encrypt or decrypt using the generated public key.
 
 ### Example
 
-```
+```plaintext
 p: 61
 q: 53
 Good Job!
-Public Key: (e, n)
-Private Key: (d, n)
+Public Key: (17, 3233)
+Private Key: (2753, 3233)
+Encryption Key in the form of (e, En): (17, 3233)
+Number that you want to encrypt/decrypt: 65
+Encrypted Number: 2790
 ```
 
-## Notes
+## Functions Overview
 
-- Ensure that the numbers you enter are prime; otherwise, the script will prompt an error.
-- The range for calculating the private key can be adjusted for larger values if necessary.
+- **checkIfPrime(a)**: Checks if the given number `a` is a prime number.
+- **calculatePbKey(p, q)**: Computes the public key based on the two prime numbers `p` and `q`.
+- **calculatePvKey(e, En, n)**: Calculates the private key.
+- **error(a)**: Handles error messages for non-positive or non-prime inputs.
 
-## Author
+## Contribution
 
-This script was created as an educational demonstration of the RSA algorithm. 
+Contributions are welcome! Feel free to submit a pull request or open an issue to discuss potential improvements.
 
 ## License
 
-This script is provided for educational purposes. Feel free to use and modify it as needed!
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+For any questions or feedback, please reach out via GitHub issues. Happy coding!

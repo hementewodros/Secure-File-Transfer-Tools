@@ -19,7 +19,7 @@ Make sure you have Python 3.x installed on your machine. You can download it fro
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/secure-file-transfer.git
+   git clone https://github.com/hementewodros/secure-file-transfer.git
    cd secure-file-transfer
    ```
 
@@ -53,10 +53,6 @@ Encrypted Number: 2790
 - **calculatePbKey(p, q)**: Computes the public key based on the two prime numbers `p` and `q`.
 - **calculatePvKey(e, En, n)**: Calculates the private key.
 - **error(a)**: Handles error messages for non-positive or non-prime inputs.
-
-## Contribution
-
-Contributions are welcome! Feel free to submit a pull request or open an issue to discuss potential improvements.
 
 ## License
 
